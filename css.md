@@ -8,25 +8,19 @@ Esta guía recopila de multiples sites lineamiantos que debemos seguir para todo
   * [General](#general)
   * [Indentación](#indentación)
   * [Un archivo vs. varios archivos](#un-archivo-vs-varios-archivos)
-  * [Tabla de contenidos](#tabla-de-contenidos)
   * [Título de secciones](#título-de-secciones)
 * [Orden del código](#orden-del-código)
 * [Anatomía del conjunto de reglas](#anatom%C3%ADa-del-conjunto-de-reglas)
 * [Convenciones para los nombres](#convenciones-para-los-nombres)
   * [JS Hooks](#js-hooks)
-  * [Internacionalización](#internacionalización)
 * [Comentarios](#comentarios)
   * [Comentarios Avanzados](#comentarios-avanzados)
     * [Selectores quasi-calificados](#selectores-quasi-calificados)
-    * [Código de etiquetas](#código-de-etiquetas)
     * [Indicadores de Objetos/Extensiones](#indicadores-de-objetos/extensiones)
 * [Escribiendo CSS](#escribiendo-css)
 * [Construyendo nuevos componentes](#construyendo-nuevos-componentes)
-* [OOCSS](#oocss)
 * [Layout](#layout)
-* [Tamaño UI](#tamano-ui)
-  * [Tamaño de fuente](#tamano-de-fuente)
-* [Taquigrafía](#taquigrafía)
+* [Tamaño de fuente](#tamano-de-fuente)
 * [IDs](#IDs)
 * [Selectores](#selectores)
   * [Selectores sobre cualificados](#selectores-sobre-cualificados)
@@ -36,7 +30,6 @@ Esta guía recopila de multiples sites lineamiantos que debemos seguir para todo
 * [Números mágicos y absolutos](#numeros-mágicos-y-absolutos)
 * [Hojas de estilos condicionales](#hojas-de-estilos-condicionales)
 * [Depuración](#depuración)
-* [Preprocesadores](#preprocesadores)
 
 ---
 
@@ -366,34 +359,3 @@ Si te encuentras con un problema de CSS **quita código antes de empezar a agreg
 Borra trozos de CSS y marcado hasta que el problema desaparezca, así puedes determinar en que parte o línea reside el problema.
 
 Puede ser tentador poner un 'overflow:hidden;' en un elemento para ocultar los efectos de un error en el layout, pero overflow nunca fue probablemente el problema. **Arregla el problema, no sus síntomas.**
-
-## Preprocesadores
-
-### **Nota del traductor:** Harry Roberts (@csswizardry), autor de este texto, usa Sass, la idea e incluso las técnicas que se exponen a continuación son perfectamente adaptables a cualquier otro preprocesador //
-
-Sass es mi preprocesador elegido. Usa preprocesadores para mejorar la creación de CSS pero evita anidaciones exageradas! Anida sólo cuando sea necesario en vanilla CSS, Ej:
-
-    .header{}
-    .header .site-nav{}
-    .header .site-nav li{}
-    .header .site-nav li a{}
-
-Sería totalmente innecesario en un CSS normal, de manera que lo que sigue estaría **mal**
-
-Sass/Less:
-
-    .header{
-        .site-nav{
-            li{
-                a{}
-            }
-        }
-    }
-
-Lo correcto sería escribirlo así:
-
-    .header{}
-    .site-nav{
-        li{}
-        a{}
-    }
