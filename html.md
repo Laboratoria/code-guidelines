@@ -26,7 +26,8 @@ Always keep your style smart, tidy, clean, and well-formed.
 
 Always declare the document type as the first line in your document:
 
-```<!DOCTYPE html>
+```html
+<!DOCTYPE html>
 
 If you want consistency with lower case tags, you can use:
 
