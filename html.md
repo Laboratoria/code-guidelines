@@ -26,13 +26,15 @@ Always keep your style smart, tidy, clean, and well-formed.
 
 Always declare the document type as the first line in your document:
 
-```html
+```
 <!DOCTYPE html>
+```
 
 If you want consistency with lower case tags, you can use:
 
-```<!doctype html>
-
+```
+<!doctype html>
+```
 ## Use Lower Case Element Names
 
 HTML5 allows mixing uppercase and lowercase letters in element names.
