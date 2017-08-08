@@ -112,7 +112,7 @@ Un ejemplo corto:
         margin-left: -10px;
         padding:0.25em;
     }
-Aquí podemos ver que '.widget-heading' debe ser un hijo de '.widget'. 
+Aquí podemos ver que '.widget-heading' debe ser un hijo de '.widget'.
 
 También podemos ver que las declaraciones de '.widget-heading' están declaradas por orden de relevancia; '.widget-heading' debe ser un elemento de texto y podemos empezar con nuestras reglas de texto, seguidas por todas las demás.
 
@@ -276,11 +276,11 @@ Los shorthands son buenos, pero pueden hacer caer en malas prácticas fácilment
 
 Una pequeña anotación acerca de IDs en CSS antes de entrar a ver selectores en general.
 
-**NUNCA uses IDs en CSS.**
+**EVITA usar IDs en CSS.**
 
-Pueden ser usados en tu marcado para referencias de JS, pero usad  sólo clases para estilos.
+Pueden ser usados en tu marcado para referencias de JS, pero evita  usarlos como estilos.
 
-Las clases vienen con el beneficio de ser reusables (aún si no queremos, podemos) y tienen un buen y bajo especificado. El especificado es una de las formas más rápidas de afrontar dificultades en proyectos y mantenerlo bajo en todo momento, es imperativo. Una ID es **255** veces más específico que una clase, por ello _nunca_ los uses en CSS.
+Las clases vienen con el beneficio de ser reusables (aún si no queremos, podemos) y tienen un buen y bajo especificado. El especificado es una de las formas más rápidas de afrontar dificultades en proyectos y mantenerlo bajo en todo momento, es imperativo. Una ID es **255** veces más específico que una clase, por ello _evita_ usarlos en CSS.
 
 ## Selectores
 
@@ -302,7 +302,7 @@ Como ya comentamos anteriormente, selectores calificados son malas noticias.
 
 Un selector sobre calificado es como 'div.promo'. Probablemente podrías obtener el mismo resultado usando sólo '.promo'. Claro, algunas veces querrás calificar una clase con un elemento (Ej: si tienes una clase genérica '.error' que debe verse diferente cuando se aplica a un elemento diferente (Ej: '.error{color:red;}' 'div.error{padding:14px;}')), pero generalmente se evita siempre que sea posible.
 
-Otro ejemplo de un selector sobre calificado sería 'ul.nav li a {}'. Al igual que arriba, podemos eliminar instantáneamente el 'ul' y ya que sabemos que '.nav' es una lista, podemos saber que cualquier 'a' _debe_ ir en un 'li', así que podemos cambiar 'ul.nav li a{}' por '.nav a{}'.
+Otro ejemplo de un selector sobre calificado sería 'ul.nav li a {}'. Al igual que arriba, podemos eliminar instantáneamente el 'ul' y ya que sabemos que '.nav' es una lista, podemos saber que cualquier 'a' _debe_ ir en un 'li', así que podemos cambiar 'ul.nav li a {}' por '.nav a {}'.
 
 
 ### Rendimiento de los selectores
