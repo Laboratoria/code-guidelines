@@ -1,73 +1,70 @@
 # Notas de estilo para HTML(5)
 
-## HTML Coding Conventions
+## HTML Conveciones de Codificación
 
-Web developers are often uncertain about the coding style and syntax to use in HTML.
+Los Desarrolladores Web a menudo no están seguros sobre el estilo de codificación y la sintaxis para usar HTML.
 
-Between 2000 and 2010, many web developers converted from HTML to XHTML.
+Entre el 2000 y el 2010, muchos desarrolladores web convertían HTML en XHTML.
 
-With XHTML, developers were forced to write valid and "well-formed" code.
+Con XHTML, los desarrolladores fueron forzados a escribir, validar y tener un “código bien formado” ó “Buenas prácticas en el código”.
 
-HTML5 is a bit more sloppy when it comes to code validation.
+HTML5 es un poco menos riguroso cuando se trata de la validación de código.
 
-With HTML5, you must create your own Best Practice, Style Guide and Coding Conventions.
+Con HTML5 tú debes crear tu propia buena práctica, guía de estilo y convenciones de código.
 
-## Be Smart and Future Proof
+## Se inteligente y la prueba del futuro
 
-A consequent use of style, makes it easier for others to understand and use your HTML.
+Un consecuente uso de estilo puede hacer más fácil para otros entender y usar tu HTML.
 
-In the future, programs like XML readers, may want to read your HTML.
+En el futuro, programas como lectores de XML, podrían leer tu HTML.
 
-Using a well-formed "close to XHTML" syntax, can be smart.
+Usar la sintaxis de una estructura bien formada similar a XHTML puede ser una buena práctica.
 
-Always keep your style smart, tidy, clean, and well-formed.
+Siempre mantén tus buenas prácticas de estilo de manera ordenada y limpia.
 
-## Use Correct Document Type
 
-Always declare the document type as the first line in your document:
+## Use Correcto del Tipo de Documento
+
+Siempre declara el tipo de documento en la primera línea de tu documento:
 
 ```
 <!DOCTYPE html>
 ```
 
-If you want consistency with lower case tags, you can use:
+Si deseas consistencia en tus etiquetas puedes declarar el tipo de documento también de la siguiente manera:
 
 ```
 <!doctype html>
 ```
-## Use Lower Case Element Names
+## Uso de minúsculas en los nombres de los elementos
 
-HTML5 allows mixing uppercase and lowercase letters in element names.
+HTML5 permite mezclar minúsculas y mayúsculas en los nombres de los elementos.
 
-We recommend using lowercase element names:
+Nosotros recomendamos usar minúscula en los nombres de los elementos.
 
-Mixing uppercase and lowercase names is bad
-Developers are used to using lowercase names (as in XHTML)
-Lowercase look cleaner
-Lowercase are easier to write Bad:
+Mezclar nombres con Mayúsculas y minúsculas es malo, los desarrolladores esta acostumbrados a usar nombre en minúsculas (como en xhtml) las minúsculas se ve más limpio y son fáciles de escribir mal:
+
 ```
-<SECTION> 
+<SECTION>
   <p>This is a paragraph.</p>
 </SECTION>
 ```
-#### Very Bad:
+#### Mala práctica:
 ```
-<Section> 
+<Section>
   <p>This is a paragraph.</p>
 </SECTION>
 ```
-#### Good:
+#### Buena práctica:
 ```
-<section> 
+<section>
   <p>This is a paragraph.</p>
 </section>
 ```
-Close All HTML Elements
-In HTML5, you don't have to close all elements (for example the <p> element).
+Es recomendable que todos los elementos en HTML5 sean cerrados (por ejemplo el elemento <p>).
 
-We recommend closing all HTML elements:
 
-Looking bad:
+#### Mala práctica:
 
 ```
 <section>
@@ -75,7 +72,7 @@ Looking bad:
   <p>This is a paragraph.
 </section>
 ```
-Looking good:
+#### Buena práctica:
 
 ```
 <section>
@@ -83,100 +80,94 @@ Looking good:
   <p>This is a paragraph.</p>
 </section>
 ```
-## Close Empty HTML Elements
-In HTML5, it is optional to close empty elements.
+## Elementos vacíos de HTML sin cierre:
+En HTML5, es opcional cerrar elementos vacios.
 
-This is allowed:
+Esto esta permitido:
 
 ```
 <meta charset="utf-8">
 ```
-This is also allowed:
+Esto tambien esta permitido:
 
 <meta charset="utf-8" />
-The slash (/) is required in XHTML and XML.
+El Slash (/) es requerido en XHTML y XML.
 
-If you expect XML software to access your page, it might be a good idea to keep it.
+Si espera software en XML para acceder a la página, puede ser una buen idea mantenerlo.
 
-## Use Lower Case Attribute Names
-HTML5 allows mixing uppercase and lowercase letters in attribute names.
+## Uso de minúscula en los nombre de atributos:
+HTML5 permite mezclar en minúscula y mayúscula los nombres de atributos.
+Nosotros recomendamos usar minúscula en los nombres de los atributos:
+Mezclar nombres con Mayúsculas y minúsculas es malo, los desarrolladores esta acostumbrados a usar nombre en minúsculas (como en xhtml) las minúsculas se ve más limpio y son fáciles de escribir mal:
 
-We recommend using lowercase attribute names:
-
-Mixing uppercase and lowercase names is bad
-Developers are used to using lowercase names (as in XHTML)
-Lowercase look cleaner
-Lowercase are easier to write
-Looking bad:
+#### Mala práctica:
 
 ```
 <div CLASS="menu">
 ```
-Looking good:
+#### Buena práctica:
 
 ```
 <div class="menu">
 ```
-## Quote Attribute Values
-HTML5 allows attribute values without quotes.
+## Comillas
+HTML5 permite usar atributos sin las comillas.
 
-We recommend quoting attribute values:
+Nosotros recomendamos usar las comillas en los valores de los atributos:
 
-You have to use quotes if the value contains spaces
-Mixing styles is never good
-Quoted values are easier to read
-This will not work, because the value contains spaces:
+Tienes que usar las comillas si el valor contiene espacios, mezclar estilos no es bueno, los valores de las comillas son fáciles de escribir. Esto podría no funcionar, porque el valor contiene espacios:
+
 
 ```
 <table class=table striped>
 ```
 
-This will work:
+### Esto funcionará:
 
 ```
 <table class="table striped">
 ```
-## Image Attributes
-Always use the alt attribute with images. It is important when the image cannot be viewed.
+## Atributos en las imagenes:
+Siempre usa el atributo “alt” con imágenes. Es importante cuando la imagen no se visualiza, ya que este “alt” indicará que imagen está siendo colocada ahí.
 
 ```
 <img src="html5.gif" alt="HTML5" style="width:128px;height:128px">
 ```
 
-Always define image size. It reduces flickering because the browser can reserve space for images before they are loaded.
+Siempre define el tamaño de la imagen. Esto permite que el navegador guarde el espacio de la imagen antes de la carga evitando un parpadeo innecesario.
 
 ```
 <img src="html5.gif" alt="HTML5" style="width:128px;height:128px">
 ```
 
-## Spaces and Equal Signs
-Spaces around equal signs is legal:
+## Espacios y signos de igualdad:
+Los espacios alrededor del signo “igual” no son buena práctica:
 
 ```
 <link rel = "stylesheet" href = "styles.css">
 ```
 
-But space-less is easier to read, and groups entities better together:
+Menos espacio es más fácil de leer:
 ```
 <link rel="stylesheet" href="styles.css">
 ```
 
-## Avoid Long Code Lines
-When using an HTML editor, it is inconvenient to scroll right and left to read the HTML code.
+## Evitar largas líneas de código
+Cuando usamos un editor de texto, el inconveniente de hacer scroll hacia la derecha e izquierda para leer el HMTL5.
 
-Try to avoid code lines longer than 80 characters.
+Trata de evitar que tus líneas de código no sea más largo de 80 caracteres.
 
-## Blank Lines and Indentation
-Do not add blank lines without a reason.
+## Líneas en blanco e indentación:
+No agregues líneas en blanco sin ninguna razón.
 
-For readability, add blank lines to separate large or logical code blocks.
+Para que sea más fácil de leer, agrega líneas blancas para separar largos y gruesos bloques de código.
 
-For readability, add 2 spaces of indentation. Do not use TAB.
+Para que sea más fácil de leer, añade 2 espacios de indentación. No uses TAB.
 
-Do not use unnecessary blank lines and indentation. It is not necessary to use blank lines between short and related items. It is not necessary to indent every element:
+No uses líneas blancas o indentación que no sea necesaria, no es necesario usar líneas blancas entre cortos y relacionados artículos o data, no es necesario indentar cada elemento:
 
-#### Unnecessary:
-``` 
+#### Innecesario:
+```
 <body>
 
   <h1>Famous Cities</h1>
@@ -193,7 +184,7 @@ Do not use unnecessary blank lines and indentation. It is not necessary to use b
 </body>
 ```
 
-#### Better:
+#### Buena práctica:
 ```
 <body>
 
@@ -208,7 +199,7 @@ and the home of the Japanese Imperial Family.</p>
 </body>
 ```
 
-#### Table Example:
+#### Ejemplo de Tabla:
 ```
 <table>
   <tr>
@@ -226,7 +217,7 @@ and the home of the Japanese Imperial Family.</p>
 </table>
 ```
 
-#### List Example:
+#### Ejemplo de Lista:
 ```
 <ol>
   <li>London</li>
@@ -235,12 +226,12 @@ and the home of the Japanese Imperial Family.</p>
 </ol>
 ```
 
-## Omitting <html> and <body>?
-In the HTML5 standard, the <html> tag and the <body> tag can be omitted.
+## Omitir <html> y <body>?
+En HTML5 estándar, la etiqueta <html> y la etiqueta <body>  pueden ser omitidas.
 
-The following code will validate as HTML5:
+El siguiente código puede ser validado en HTML5:
 
-#### Example
+#### Ejemplo
 ```
 <!DOCTYPE html>
 <head>
@@ -252,27 +243,27 @@ The following code will validate as HTML5:
 ```
 
 
-We do not recommend omitting the <html> and <body> tags.
+Nosotros no recomendamos omitir estas etiquetas.
 
-The <html> element is the document root. It is the recommended place for specifying the page language:
+El documento es el elemento raíz, es el lugar recomendado para especificar a la página el lenguaje:
 ```
 <!DOCTYPE html>
 <html lang="en-US">
 ```
-Declaring a language is important for accessibility applications (screen readers) and search engines.
+Declarar el lenguaje es importante para la accesibilidad de aplicaciones, como puede ser las herramientas de SEO.
 
-Omitting <html> or <body> can crash DOM and XML software.
+Omitirlos puede dañar el DOM y el XML software.
 
-Omitting <body> can produce errors in older browsers (IE9).
+Omitir puede producir error en el navegadores antiguos como IE9.
 
-## Omitting <head>?
-In the HTML5 standard, the <head> tag can also be omitted.
+## Omitir <head>?
+El estándar de HTML5 la etiqueta <head> puede ser omitida.
 
-By default, browsers will add all elements before <body>, to a default <head> element.
+Por default, los navegadores añadirán los elementos antes, a un elemento predeterminado.
 
-You can reduce the complexity of HTML, by omitting the <head> tag:
+Puedes reducir la complejidad de HTML5, omitiendo la etiqueta <head>.
 
-Example
+#### Ejemplo
 ```
 <!DOCTYPE html>
 <html>
@@ -286,15 +277,16 @@ Example
 </html>
 ```
 
-Omitting tags is unfamiliar to web developers. It needs time to be established as a guideline.
+Omitir etiquetas es poco familiar para los desarrolladores web. Necesita tiempo para establecerlo como una guía.
 
 ## Meta Data
-The <title> element is required in HTML5. Make the title as meaningful as possible:
+La etiqueta <title> es un elemento requerido en HTML5. Mantén el título lo más claro posible.
 
 ```
 <title>HTML5 Syntax and Coding Style</title>
 ```
-To ensure proper interpretation, and correct search engine indexing, both the language and the character encoding should be defined as early as possible in a document:
+Para asegurar la interpretación adecuada y la correcta indexación de motores de búsqueda, ambos lenguajes y la codificación de caracteres debería ser definida lo más pronto posible en el documento:
+
 ```
 <!DOCTYPE html>
 <html lang="en-US">
@@ -303,33 +295,33 @@ To ensure proper interpretation, and correct search engine indexing, both the la
   <title>HTML5 Syntax and Coding Style</title>
 </head>
 ```
-## HTML Comments
-Short comments should be written on one line, with a space after <!-- and a space before -->:
+## Comentarios en HTML
+Los comentarios cortos deben escribirse en una sola línea, de manera espaciada <!-- and a space before -->:
 ```
 <!-- This is a comment -->
 ```
-Long comments, spanning many lines, should be written with <!-- and --> on separate lines:
+Los comentarios largos abarcan muchas líneas, debería ser escrito <!-- and --> con líneas separadas:
 
 ```
-<!-- 
+<!--
   This is a long comment example. This is a long comment example. This is a long comment example.
   This is a long comment example. This is a long comment example. This is a long comment example.
 -->
 ```
-Long comments are easier to observe, if they are indented 2 spaces.
+Los comentarios largos son fáciles de observar, si están indentando con dos espacios.
 
-## Style Sheets
-Use simple syntax for linking style sheets (the type attribute is not necessary):
+## Hojas de Estilo
+Usa la sintaxis simple para linkear las hojas de estilo (El tipo de atributo no es necesario):
 
 ```
 <link rel="stylesheet" href="styles.css">
 ```
-Short rules can be written compressed, on one line, like this:
+Los estilos cortos pueden ser escritos de manera comprimida, en una línea, como el siguiente ejemplo:
 
 ```
 p.into {font-family: Verdana; font-size: 16em;}
 ```
-Long rules should be written over multiple lines:
+Los estilos largos deben ser escritos en múltiples líneas:
 
 ```
 body {
@@ -340,74 +332,75 @@ body {
 }
 ```
 
-Place the opening bracket on the same line as the selector.
-Use one space before the opening bracket.
-Use 2 spaces of indentation.
-Use colon plus one space between each property and its value.
-Use space after each comma or semicolon.
-Use semicolon after each property-value pair, including the last.
-Only use quotes around values if the value contains spaces.
-Place the closing bracket on a new line, without leading spaces.
-Avoid lines over 80 characters.
-Adding a space after a comma, or a semicolon, is a general rule in all types of writing.
+Coloca el bracket ({}) en la misma línea del selector, usa un espacio antes de abrir el bracket.
 
-## Loading JavaScript in HTML
-Use simple syntax for loading external scripts (the type attribute is not necessary):
+Usa dos espacios para la indentación. Usa los dos puntos (:) entre la propiedad y el valor.
+
+Usa el espacio después de la coma (,) o punto y coma (;). Usa punto  coma (;) después de cada propieda:valor sin espacios.
+
+Evita las líneas de 80 caracteres. Agrega un espacio después y coma (,) o punto y coma (;), es una regla general en todos los tipos de escritura.
+
+
+## Cargando JavaScript en HTML5
+Usa una sintaxis simple para cargar los scripts externos ( El tipo de atributo no es necesario):
 ```
 <script src="myscript.js">
 ```
-## Accessing HTML Elements with JavaScript
-A consequence of using "untidy" HTML styles, might result in JavaScript errors.
+## Accediendo a los elementos de HTML con JavaScript
+Una consecuencia de usar un estilo de HTML “desordenado”, podría resultar un JavaScript con errores.
 
-These two JavaScript statements will produce different results:
+Existen dos tipos de declaración que puede producir diferentes resultados:
 
-Example
+#### Ejemplo
+
 ```
 var obj = getElementById("Demo")
 
 var obj = getElementById("demo")
 ```
 
-If possible, use the same naming convention (as JavaScript) in HTML.
+Es posible usar las mismas convenciones de nombramiento (como javaScript) en HTML.
 
-Visit the JavaScript Style Guide.
+Visita la guía de Estilo de JavaScript.
 
-## Use Lower Case File Names
-Most web servers (Apache, Unix) are case sensitive about file names:
+## Utilizar minúsculas en los nombres de los Archivos
+Muchos de los servidores web (Apache, Unix) diferencia entre mayúsculas y minúsculas con el caso de nombramiento en los archivos, en este caso deberíamos seguir las siguientes reglas:
 
-london.jpg cannot be accessed as London.jpg.
+london.jpg no puede ser London.jpg
 
-Other web servers (Microsoft, IIS) are not case sensitive:
+Otro servidor web (Microsoft, IIS) no distinguen entre mayúsculas y minúsculas, entonces puede ser escrito de la siguiente manera:
 
-london.jpg can be accessed as London.jpg or london.jpg.
+london.jpg puede ser London.jpg o london.jpg
 
-If you use a mix of upper and lower case, you have to be extremely consistent.
+Si tu usas una mezcla de mayúscula y minúscula, tienes que ser extremadamente consistente.
 
-If you move from a case insensitive, to a case sensitive server, even small errors will break your web.
+Si se mueve de un caso en que no sea importante el reconocimiento de mayúsculas a minúsculas a casos en los que sí importa en un servidor web cualquier pequeño error puede romper tu página.
 
-To avoid these problems, always use lower case file names (if possible).
+Para evitar estos problemas, siempre usa minúscula en el nombramiento de archivos (si es posible).
 
-## File Extensions
-HTML files should have a .html extension (or .htm).
+## Extensiones de Archivos
+Los archivos HTML deben tener una extensión .html o .htm
 
-CSS files should have a .css extension.
+Los archivos CSS deben tener una extensión .css
 
-JavaScript files should have a .js extension.
+Los archivos de JavaScript deben tener una extensión .js
 
-## Differences Between .htm and .html
-There is no difference between the .htm and .html extensions. Both will be treated as HTML by any web browser or web server.
+## Diferencias entre .html y .htm
 
-The differences are cultural:
+No existe diferencia entre las extensiones de .htm y .html, ambas pueden ser tratadas como HTML por cualquier navegador web o servidor web.
 
-.htm "smells" of early DOS systems where the system limited the extensions to 3 characters.
+Las diferencia son culturales.
 
-.html "smells" of Unix operating systems that did not have this limitation.
+.htm “huele” a un sistema temprano llamado DOS donde el límite de extensiones es de 3 caracteres, mientras que .html “huele” a UNIX un sistema que no tiene limitación en sus caracteres.
 
-## Technical Differences
-When a URL does not specify a filename (like http://www.w3schools.com/css/), the server returns a default filename. Common default filenames are index.html, index.htm, default.html, and default.htm.
 
-If your server is configured only with "index.html" as default filename, your file must be named "index.html", not "index.htm."
+## Diferencias Técnicas
+Cuando una URL no especifica el nombre de archivo ( como http://www.w3schools.com/css/), el servidor retorna por defecto el nombre del archivo.
 
-However, servers can be configured with more than one default filename, and normally you can set up as many default filenames as needed.
+Los nombre comunes por defecto son index.html, index.htm, default.html y default.htm
 
-Anyway, the full extension for HTML files is .html, and there's no reason it should not be used
+Si tu servidor es configurado solo con “index.html” como nombre por defecto, tu archivo debe ser nombrado como “index.html” no “index.htm”
+
+Sin embargo, los servidores pueden ser configurados con más de un nombre por defecto y normalmente puedes configurar tantos nombres de archivos por defecto como necesites.
+
+De todas formas, la extensión completa para HTML es .html y no existe ninguna razón por la cual no puede ser usada.
